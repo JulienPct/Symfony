@@ -1,3 +1,21 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+hello:
+  path: /hello/{prenom}
+  controller: App\Controller\HelloWorldController::hello
+  requirements:
+    prenom: '[a-zA-Z]*' #expression régulière validant les parametre contenant toutes les lettres de l'alphabet minuscule/maj pour une taille illimité
+
+helloList:
+  path: /helloList/
+  controller: App\Controller\HelloWorldController::helloList
+
+form:
+  path: /form
+  controller: App\Controller\HelloWorldController::form
+  methods: GET
+
+formReceive:
+  path: /form
+  controller: App\Controller\HelloWorldController::formReceive
+  methods: POST
+
+
