@@ -4,14 +4,14 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class HelloWorldController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
+class HelloWorldController extends AbstractController
 {
     function Hello($prenom):Response{
 
-        $returnString = "Hello $prenom";
         return $this->render('hello.html.twig', [
             'prenom'=>$prenom
         ]);
@@ -30,13 +30,13 @@ class HelloWorldController extends \Symfony\Bundle\FrameworkBundle\Controller\Ab
 
     function form():Response{
         return new Response("
-        <html>
-        <body>
-        <form method='post'>
-        Nom : <input name = 'name' />
-        <input type='submit'/>
-        </form>
-        </body>
+        <html lang='fr'>
+            <body>
+                <form method='post'>
+                    Nom : <input name = 'name' />
+                    <input type='submit'/>
+                </form>
+            </body>
         </html>
         ");
     }
