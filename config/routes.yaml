@@ -18,4 +18,9 @@ formReceive:
   controller: App\Controller\HelloWorldController::formReceive
   methods: POST
 
+loginForm:
+  path: /login
+  controller: App\Controller\Forms\LoginController::loginForm
+  methods: GET|POST
+
 
