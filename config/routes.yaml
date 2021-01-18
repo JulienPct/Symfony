@@ -22,5 +22,3 @@ loginForm:
   path: /login
   controller: App\Controller\Forms\LoginController::loginForm
   methods: GET|POST
-
-
